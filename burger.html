@@ -9,16 +9,67 @@
     $(function() {
 
       $('button').click(function() {
-        
+
         var name = $('#name').val();
         var bread = $('#bread').val();
         var meat = $('#meat').val();
         var side = $('#side').val();
         var drink = $('#drink').val();
-        console.log(name + bread + meat + side + side + drink)
-        
-        
-        
+
+        var done = "Order Up " + name + "!";
+
+        // console.log(name + bread + meat + side + side + drink);
+        console.log(bread + meat + side + drink)
+
+        $('p').html(done);
+
+        $('#bun-display')
+          .css({
+            background: "url(images/burgerBunTop-" + bread + ".png)",
+            height: "100px",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat"
+            // backgroundAttachment: "fixed",
+            // backgroundPosition: "25% 50%"
+          })
+          .appendTo("body")
+
+        $('#meat-display')
+          .css({
+            background: "url(images/burgerPatty-" + meat + ".png)",
+            height: "100px",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat"
+          })
+          .appendTo("body")
+
+
+        $("<div id='bottom-bun'></div>")
+          .css({
+            background: "url(images/burgerBunBottom.png)",
+            height: "100px",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat"
+          })
+          .appendTo("body")
+
+        $('#side-display')
+          .css({
+            background: "url(images/side-" + side + ".png)",
+            height: "100px",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat"
+          })
+          .appendTo("body")
+
+        $('#drink-display')
+          .css({
+            background: "url(images/drink-" + drink + ".png)",
+            height: "100px",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat"
+          })
+          .appendTo("body");
       });
 
     });
@@ -28,38 +79,46 @@
 <body>
 
   Name: <input id="name">
-  
+
   <br> Bread: <select id="bread">
-    <option value="0">Select:</option>
-    <option value="1">Italian</option>
-    <option value="2">Seseme</option>
-    <option value="3">Normal</option>
+    <option value="0">Select</option>
+    <option value="Normal">Normal</option>
+    <option value="Seseme">Seseme</option>
+    <option value="Kaiser">Kaiser</option>
   </select>
-  
+
   <br> Meat: <select id="meat">
-    <option value="0">Select:</option>
-    <option value="1">Well</option>
-    <option value="2">Medium</option>
-    <option value="3">Rare</option>
+    <option value="0">Select</option>
+    <option value="Well">Well</option>
+    <option value="Medium">Medium</option>
+    <option value="Rare">Rare</option>
   </select>
-  
+
   <br> Side: <select id="side">
-    <option value="0">Select:</option>
-    <option value="1">Fries</option>
-    <option value="2">Mash Potatos</option>
-    <option value="3">Coslaw</option>
+    <option value="0">Select</option>
+    <option value="Fries">Fries</option>
+    <option value="Mash Potatos">MashedPotatos</option>
+    <option value="Coslaw">Coleslaw</option>
   </select>
-  
+
   <br> Drink: <select id="drink">
-    <option value="0">Select:</option>
-    <option value="1">Coke</option>
-    <option value="2">Sprite</option>
-    <option value="3">Water</option>
+    <option value="0">Select</option>
+    <option value="Coke">Coke</option>
+    <option value="Sprite">Sprite</option>
+    <option value="Water">Water</option>
   </select>
   <br>
-  
+
   <button>Serve!</button>
 
+
+
+  <p></p>
+
+  <div id="bun-display" style="height: 100%"></div>
+  <div id="meat-display" style="height: 100px"></div>
+  <div id="side-display" style="height: 100px"></div>
+  <div id="drink-display" style="height: 100px"></div>
 
 </body>
 
