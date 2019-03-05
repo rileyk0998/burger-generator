@@ -7,6 +7,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
     $(function() {
+      $('body').css('background', 'red' ); 
 
       $('button').click(function() {
 
@@ -27,10 +28,9 @@
           .css({
             background: "url(images/burgerBunTop-" + bread + ".png)",
             height: "100px",
+            width: "300px", 
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat"
-            // backgroundAttachment: "fixed",
-            // backgroundPosition: "25% 50%"
           })
           .appendTo("body")
 
@@ -38,6 +38,7 @@
           .css({
             background: "url(images/burgerPatty-" + meat + ".png)",
             height: "100px",
+            width: "275px", 
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat"
           })
@@ -48,6 +49,7 @@
           .css({
             background: "url(images/burgerBunBottom.png)",
             height: "100px",
+            width: "250px", 
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat"
           })
@@ -56,7 +58,8 @@
         $('#side-display')
           .css({
             background: "url(images/side-" + side + ".png)",
-            height: "100px",
+            height: "200px",
+            width: "400px",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat"
           })
@@ -65,7 +68,8 @@
         $('#drink-display')
           .css({
             background: "url(images/drink-" + drink + ".png)",
-            height: "100px",
+            height: "200px",
+            width: "300px",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat"
           })
@@ -97,8 +101,8 @@
   <br> Side: <select id="side">
     <option value="0">Select</option>
     <option value="Fries">Fries</option>
-    <option value="Mash Potatos">MashedPotatos</option>
-    <option value="Coslaw">Coleslaw</option>
+    <option value="MashedPotatoes">MashedPotatoes</option>
+    <option value="Coleslaw">Coleslaw</option>
   </select>
 
   <br> Drink: <select id="drink">
