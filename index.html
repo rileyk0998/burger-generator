@@ -9,7 +9,7 @@
     $(function() {
       $('body').css('background', 'red' ); 
 
-      $('button').click(function() {
+      $('Serve').click(function() {
 
         var name = $('#name').val();
         var bread = $('#bread').val();
@@ -75,6 +75,16 @@
           })
           .appendTo("body");
       });
+      
+      // $(".random").click(function () {
+      //   const bread = $("select").children() // this gives an array of children so it would be the options
+      //   const myRandomNumber = Math.floor(Math.random() * 3 - 1) + 1;
+      //   const myRandomOption = bread[myRandomNumber];
+      //   console.log(myRandomOption.value)
+        
+        
+        
+      // })
 
     });
   </script>
@@ -114,6 +124,8 @@
   <br>
 
   <button>Serve!</button>
+  <br>
+  <!--<button class= "random">Random Burger</button>-->
 
 
 
